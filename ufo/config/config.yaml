@@ -1,0 +1,58 @@
+HOST_AGENT: {
+  VISUAL_MODE: True,  # Whether to use the visual mode
+  
+  API_TYPE: "Ollama",  # Updated to Ollama API
+  API_BASE: "http://localhost:11434",  # Ollama's API base URL
+  API_KEY: "YOUR_OLLAMA_API_KEY",  # Replace with your actual Ollama API key
+  API_VERSION: "2024-02-15-preview",  # Update if necessary per Ollama's API version
+  API_MODEL: "llava-phi3",  # Replace with the correct Ollama model name
+}
+
+APP_AGENT: {
+  VISUAL_MODE: True,  # Whether to use the visual mode
+  
+  API_TYPE: "Ollama",  # Updated to Ollama API
+  API_BASE: "http://localhost:11434",  # Ollama's API base URL
+  API_KEY: "YOUR_OLLAMA_API_KEY",  # Replace with your actual Ollama API key
+  API_VERSION: "2024-02-15-preview",  # Update if necessary per Ollama's API version
+  API_MODEL: "llava-phi3",  # Replace with the correct Ollama model name
+}
+
+BACKUP_AGENT: {
+  VISUAL_MODE: True,  # Whether to use the visual mode
+  
+  API_TYPE: "Ollama",  # Updated to Ollama API
+  API_BASE: "http://localhost:11434",  # Ollama's API base URL
+  API_KEY: "YOUR_OLLAMA_API_KEY",  # Replace with your actual Ollama API key
+  API_VERSION: "2024-02-15-preview",  # Update if necessary per Ollama's API version
+  API_MODEL: "llava-phi3",  # Replace with the correct Ollama model name
+}
+
+### For GPT parameters
+MAX_TOKENS: 2000  # The max token limit for the response completion
+MAX_RETRY: 3  # The max retry limit for the response completion
+TEMPERATURE: 0.0  # The temperature of the model: the lower the value, the more consistent the output of the model
+TOP_P: 0.0  # The top_p of the model: the lower the value, the more conservative the output of the model
+TIMEOUT: 180 # The call timeout(s), default is 1 min
+
+
+### For RAG
+
+## RAG Configuration for the offline docs
+RAG_OFFLINE_DOCS: False  # Whether to use the offline RAG.
+RAG_OFFLINE_DOCS_RETRIEVED_TOPK: 1  # The topk for the offline retrieved documents
+
+## RAG Configuration for the Bing search
+BING_API_KEY: "YOUR_BING_SEARCH_API_KEY"  # The Bing search API key
+RAG_ONLINE_SEARCH: False  # Whether to use the online search for the RAG.
+RAG_ONLINE_SEARCH_TOPK: 5  # The topk for the online search
+RAG_ONLINE_RETRIEVED_TOPK: 1  # The topk for the online retrieved documents
+
+## RAG Configuration for experience
+RAG_EXPERIENCE: False  # Whether to use the RAG from its self-experience.
+RAG_EXPERIENCE_RETRIEVED_TOPK: 5  # The topk for the offline retrieved documents
+
+## RAG Configuration for demonstration
+RAG_DEMONSTRATION: False  # Whether to use the RAG from its user demonstration.
+RAG_DEMONSTRATION_RETRIEVED_TOPK: 5  # The topk for the offline retrieved documents
+RAG_DEMONSTRATION_COMPLETION_N: 3  # The number of completion choices for the demonstration resultn
